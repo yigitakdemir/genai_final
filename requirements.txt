@@ -3,4 +3,4 @@ openai==0.27.8
 streamlit==1.40.2
 python-dotenv==1.0.0
 pypdf>=3.17.4
-pillow==9.5.0
+pillow
