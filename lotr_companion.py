@@ -1,16 +1,12 @@
 # Import necessary libraries
-from flask import Flask, request, jsonify
 from langchain_community.document_loaders import DirectoryLoader
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-import os
 from langchain_community.vectorstores import FAISS
 from langchain_openai import OpenAIEmbeddings
 from langchain.prompts import PromptTemplate
 from langchain.chains.question_answering import load_qa_chain
-from langchain.docstore.document import Document
 from langchain_openai import OpenAI
-from langchain.output_parsers import RegexParser
 from dotenv import load_dotenv
 import streamlit as st
 import random
