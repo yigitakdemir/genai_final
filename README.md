@@ -1,6 +1,7 @@
-**Lord of the Rings Companion**
+****Lord of the Rings Companion****
 
 The Lord of the Rings Companion is a Retrieval-Augmented Generation (RAG) application built with Streamlit and LangChain. It uses FAISS (Facebook AI Similarity Search) to retrieve context from the full-text PDFs of J.R.R. Tolkien's The Lord of the Rings trilogy stored in a docs folder. This context is then used to answer questions, generate quizzes, and provide insights about LOTR's Middle-Earth.
+
 
 **Features**
 
@@ -11,6 +12,7 @@ The Lord of the Rings Companion is a Retrieval-Augmented Generation (RAG) applic
 •	**Explore a Character or Artifact:** learn about the history and significance of LOTR characters and artifacts. For characters, the page also tells about their powers, and in the case of artifacts, the page describes characters associated with them.
 
 •	**Test your LOTR Knowledge:** a 6-question quiz about the events in the LOTR books. Due to the nature of the website (which I will elaborate on below), this quiz is designed for fans of the LOTR world who want to be tested with advanced-level (detail-level) questions. At the end of the quiz, the user can see their total score along with the result for each question.
+
 
 **Installation**
 
@@ -28,11 +30,13 @@ The following libraries and modules are imported in the source file:
     import streamlit as st
     import random
 
+
 **Set Up Environment Variables**
 
 Create a .env file in the project root directory and add the following variables:
 
     OPENAI_API_KEY=<your_openai_api_key>
+
 
 **Configure Streamlit**
 
@@ -45,9 +49,11 @@ Ensure you have a .streamlit/config.toml file with the following text for custom
     secondaryBackgroundColor = "#2E2E2D"
     textColor = "white"
 
+
 **Add the Book PDFs**
 
 Place the PDFs of The Fellowship of the Ring, The Two Towers, and The Return of the King in a folder named docs in the root directory.
+
 
 **Run the Application**
 
@@ -56,6 +62,7 @@ Launch the app using the following command:
     py -m streamlit run .\lotr_companion.py
 
 The application will start in your default web browser. The initial loading of books into FAISS should take ~5 minutes.
+
 
 **Usage**
 
@@ -69,17 +76,14 @@ The app is divided into four main pages, accessible via a sidebar:
 
 •	**Test Your LOTR Knowledge**
 
+
 **Backend Details**
 
 •	**Document Loader:** Loads PDFs from the docs folder using PyPDFLoader.
 
 •	**Text Splitting:** Splits the books into manageable chunks for FAISS embedding.
 
-•	**FAISS Index:** Two separate indices:
-
-    • General index for lore-related queries.
-    
-    • Character-specific index for in-character responses.
+•	**FAISS Index:** Two separate indices: General index for lore-related queries, and Character-specific index for in-character responses.
     
 •	**Prompt Templates:** Customized prompts for character, general, quiz, and character/artifact description responses.
 
@@ -89,11 +93,13 @@ The app is divided into four main pages, accessible via a sidebar:
 
 •	**Response:** Show ChatGPT's "informed" response through the custom styling and format of the main page.
 
+
 **Interactive Styling**
 
 •	Themed using custom CSS for a Middle-Earth-inspired look.
 
 •	Background images, fonts, and centered character images enhance user experience.
+
 
 **What if I encounter a bug?**
 
@@ -104,6 +110,7 @@ The app is divided into four main pages, accessible via a sidebar:
 •	Check for missing dependencies and install them using pip install.
 
 •	Ensure that Streamlit theming is applied through the .streamlit/config.toml file.
+
 
 **Future Improvements**
 
