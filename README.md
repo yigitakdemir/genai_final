@@ -1,8 +1,8 @@
 **Lord of the Rings Companion**
 
-The Lord of the Rings Companion is a Retrieval-Augmented Generation (RAG) application built with Streamlit and LangChain. It uses FAISS (Facebook AI Similarity Search) to retrieve context from the full-text PDFs of J.R.R. Tolkien's The Lord of the Rings trilogy stored in a docs folder. This context is then used to answer questions, generate quizzes, and provide insights about Middle-earth.
+The Lord of the Rings Companion is a Retrieval-Augmented Generation (RAG) application built with Streamlit and LangChain. It uses FAISS (Facebook AI Similarity Search) to retrieve context from the full-text PDFs of J.R.R. Tolkien's The Lord of the Rings trilogy stored in a docs folder. This context is then used to answer questions, generate quizzes, and provide insights about LOTR's Middle-Earth.
 
-Features
+**Features**
 
 •	**Interview a Character:** ask specific questions to a selected main character in LOTR, where the character can elaborate on their actions down to the very minor details in the books. They can also talk about their aims/thoughts about different events and about other characters. They can even tell the user exactly what they said to others at various times in the LOTR timeframe. The conversation history can be seen on the page, and cleared when desired.
 
@@ -12,21 +12,21 @@ Features
 
 •	**Test your LOTR Knowledge:** a 6-question quiz about the events in the LOTR books. Due to the nature of the website (which I will elaborate on below), this quiz is designed for fans of the LOTR world who want to be tested with advanced-level (detail-level) questions. At the end of the quiz, the user can see their total score along with the result for each question.
 
-Installation
-Prerequisites
+**Installation**
 
 The following libraries and modules are imported in the source file:
+
     from langchain_community.document_loaders import DirectoryLoader
-from langchain_community.document_loaders import PyPDFLoader
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_community.vectorstores import FAISS
-from langchain_openai import OpenAIEmbeddings
-from langchain.prompts import PromptTemplate
-from langchain.chains.question_answering import load_qa_chain       
-from langchain_openai import OpenAI
-from dotenv import load_dotenv
-import streamlit as st
-import random
+    from langchain_community.document_loaders import PyPDFLoader
+    from langchain.text_splitter import RecursiveCharacterTextSplitter
+    from langchain_community.vectorstores import FAISS
+    from langchain_openai import OpenAIEmbeddings
+    from langchain.prompts import PromptTemplate
+    from langchain.chains.question_answering import load_qa_chain       
+    from langchain_openai import OpenAI
+    from dotenv import load_dotenv
+    import streamlit as st
+    import random
 
 Set Up Environment Variables
 
