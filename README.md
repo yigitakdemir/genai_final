@@ -5,8 +5,11 @@ The Lord of the Rings Companion is a Retrieval-Augmented Generation (RAG) applic
 Features
 
 •	**Interview a Character:** ask specific questions to a selected main character in LOTR, where the character can elaborate on their actions down to the very minor details in the books. They can also talk about their aims/thoughts about different events and about other characters. They can even tell the user exactly what they said to others at various times in the LOTR timeframe. The conversation history can be seen on the page, and cleared when desired.
+
 •	**Talk with an Expert:** ask questions about anything related to the three LOTR books, including very minor details. The page is able to answer anything as long as it can be deduced or inferred from the content of the book.
+
 •	**Explore a Character or Artifact:** learn about the history and significance of LOTR characters and artifacts. For characters, the page also tells about their powers, and in the case of artifacts, the page describes characters associated with them.
+
 •	**Test your LOTR Knowledge:** a 6-question quiz about the events in the LOTR books. Due to the nature of the website (which I will elaborate on below), this quiz is designed for fans of the LOTR world who want to be tested with advanced-level (detail-level) questions. At the end of the quiz, the user can see their total score along with the result for each question.
 
 Installation
