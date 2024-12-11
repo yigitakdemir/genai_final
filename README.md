@@ -57,48 +57,41 @@ Launch the app using the following command:
 
 The application will start in your default web browser. The initial loading of books into FAISS should take ~5 minutes.
 
-Usage
-Navigation
+**Usage**
 
-The app is divided into four main pages, accessible via the sidebar:
+The app is divided into four main pages, accessible via a sidebar:
 
-    Interview a Character: Select a character, ask questions, and receive in-character responses.
-    Talk with an Expert: Ask questions about Middle-earth lore and get detailed answers with retrieved context.
-    Explore a Character or Artifact: Enter a name and explore detailed insights based on the books.
-    Test Your LOTR Knowledge: Take a dynamic quiz based on random excerpts from the books.
+    Interview a Character
+    Talk with an Expert
+    Explore a Character or Artifact
+    Test Your LOTR Knowledge
 
-Backend Details
+**Backend Details**
 
     Document Loader: Loads PDFs from the docs folder using PyPDFLoader.
     Text Splitting: Splits the books into manageable chunks for FAISS embedding.
     FAISS Index: Two separate indices:
         General index for lore-related queries.
         Character-specific index for in-character responses.
-    Prompt Templates: Customized prompts for character, general, and quiz responses.
+    Prompt Templates: Customized prompts for character, general, quiz, and character/artifact description responses.
+    Context: Most relevant chunks from FAISS are combined into "context", which is used to enhance the prompts.
+    Chains: Uses LangChain to provide the prompt (which includes the FAISS-based context) into OpenAI's ChatGPT.
+    Response: Show ChatGPT's "informed" response through the custom styling and format of the main page.
 
 Interactive Styling
 
-    Themed using custom CSS for a Middle-earth-inspired look.
+    Themed using custom CSS for a Middle-Earth-inspired look.
     Background images, fonts, and centered character images enhance user experience.
 
-FAQ
-Why do I need the PDFs?
-
-The application retrieves answers from the actual text of The Lord of the Rings. Without the books, the FAISS index cannot provide relevant context.
-Can I add more characters or artifacts?
-
-Yes! Update the detect_character_tags function to include new character names or modify the artifact exploration logic.
-How are quiz questions generated?
-
-Quiz questions are dynamically created using context retrieved from the FAISS index. Each question includes four multiple-choice options with one correct answer.
 What if I encounter a bug?
 
     Ensure the book PDFs are in the correct folder (docs).
     Verify your API key in the .env file.
-    Check for missing dependencies and install them using pip install -r requirements.txt.
+    Check for missing dependencies and install them using pip install.
+    Ensure that Streamlit theming is applied through the .streamlit/config.toml file.
 
 Future Improvements
 
-    Add support for additional languages or texts from Tolkien's universe (e.g., The Silmarillion).
-    Enhance quiz logic with more diverse question types.
-    Introduce user account functionality to track quiz scores and favorite characters.
+    Add other books from Tolkien's Legendarium such as The Hobbit and Silmarillion.
+    Deploy the website in Streamlit with the FAISS models/indices already hosted, to save time on loading.
+    Add memory functionality when conversing with a character or expert.
