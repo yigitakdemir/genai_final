@@ -28,33 +28,35 @@ The following libraries and modules are imported in the source file:
     import streamlit as st
     import random
 
-Set Up Environment Variables
+**Set Up Environment Variables**
 
 Create a .env file in the project root directory and add the following variables:
 
-OPENAI_API_KEY=<your_openai_api_key>
+    OPENAI_API_KEY=<your_openai_api_key>
 
-Configure Streamlit
+**Configure Streamlit**
 
-Ensure you have a .streamlit/config.toml file for custom theming. An example:
+Ensure you have a .streamlit/config.toml file with the following text for custom theming:
 
-[theme]
-primaryColor = "#6b5a01"
-backgroundColor = "#1f1700"
-secondaryBackgroundColor = "#292929"
-textColor = "#ffffff"
-font = "sans serif"
+    [theme]
+    base = "dark"
+    primaryColor = "#F6CF33"
+    backgroundColor = "black"
+    secondaryBackgroundColor = "#2E2E2D"
+    textColor = "white"
 
-Add the Book PDFs
+**Add the Book PDFs**
 
 Place the PDFs of The Fellowship of the Ring, The Two Towers, and The Return of the King in a folder named docs in the root directory.
-Run the Application
+
+**Run the Application**
 
 Launch the app using the following command:
 
-py -m streamlit run .\lotr_companion.py
+    py -m streamlit run .\lotr_companion.py
 
-The application will start in your default web browser.
+The application will start in your default web browser. The initial loading of books into FAISS should take ~5 minutes.
+
 Usage
 Navigation
 
