@@ -91,14 +91,14 @@ The app is divided into four main pages, accessible via a sidebar:
 
 •	**Chains:** Uses LangChain to provide the prompt (which includes the FAISS-based context) into OpenAI's ChatGPT.
 
-•	**Response:** Show ChatGPT's "informed" response through the custom styling and format of the main page.
+•	**Response:** Displays ChatGPT's "informed" response through the custom styling and format of the main page.
 
 
 **Interactive Styling**
 
 •	Themed using custom CSS for a Middle-Earth-inspired look.
 
-•	Background images, fonts, and centered character images enhance user experience.
+•	Background images, fonts, and character images enhance user experience.
 
 
 **What if I encounter a bug?**
