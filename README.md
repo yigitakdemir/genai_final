@@ -1,29 +1,29 @@
-Lord of the Rings Companion
+**Lord of the Rings Companion**
 
 The Lord of the Rings Companion is a Retrieval-Augmented Generation (RAG) application built with Streamlit and LangChain. It uses FAISS (Facebook AI Similarity Search) to retrieve context from the full-text PDFs of J.R.R. Tolkien's The Lord of the Rings trilogy stored in a docs folder. This context is then used to answer questions, generate quizzes, and provide insights about Middle-earth.
+
 Features
 
-    Character Conversations: Ask questions to iconic characters like Gandalf, Frodo, Aragorn, and more. The responses are crafted in the style of the chosen character using relevant context from the books.
-    Expert Q&A: Query an "expert" on The Lord of the Rings lore to gain detailed answers about characters, places, and events.
-    Character and Artifact Exploration: Dive into the history, significance, and powers of characters or artifacts from the Middle-earth universe.
-    Trivia Quiz: Test your knowledge of The Lord of the Rings with a multiple-choice quiz generated dynamically from the books.
+•	**Interview a Character:** ask specific questions to a selected main character in LOTR, where the character can elaborate on their actions down to the very minor details in the books. They can also talk about their aims/thoughts about different events and about other characters. They can even tell the user exactly what they said to others at various times in the LOTR timeframe. The conversation history can be seen on the page, and cleared when desired.
+•	**Talk with an Expert:** ask questions about anything related to the three LOTR books, including very minor details. The page is able to answer anything as long as it can be deduced or inferred from the content of the book.
+•	**Explore a Character or Artifact:** learn about the history and significance of LOTR characters and artifacts. For characters, the page also tells about their powers, and in the case of artifacts, the page describes characters associated with them.
+•	**Test your LOTR Knowledge:** a 6-question quiz about the events in the LOTR books. Due to the nature of the website (which I will elaborate on below), this quiz is designed for fans of the LOTR world who want to be tested with advanced-level (detail-level) questions. At the end of the quiz, the user can see their total score along with the result for each question.
 
 Installation
 Prerequisites
 
-    Python 3.11 or later
-    pip package manager
-
-Clone the Repository
-
-git clone <repository-url>
-cd <repository-folder>
-
-Install Dependencies
-
-Run the following command to install the required Python libraries:
-
-pip install -r requirements.txt
+The following libraries and modules are imported in the source file:
+    from langchain_community.document_loaders import DirectoryLoader
+from langchain_community.document_loaders import PyPDFLoader
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_community.vectorstores import FAISS
+from langchain_openai import OpenAIEmbeddings
+from langchain.prompts import PromptTemplate
+from langchain.chains.question_answering import load_qa_chain       
+from langchain_openai import OpenAI
+from dotenv import load_dotenv
+import streamlit as st
+import random
 
 Set Up Environment Variables
 
