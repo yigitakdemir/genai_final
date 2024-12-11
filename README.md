@@ -116,6 +116,6 @@ The app is divided into four main pages, accessible via a sidebar:
 
 •	Add other books from Tolkien's Legendarium such as The Hobbit and Silmarillion.
 
-•	Deploy the website in Streamlit with the FAISS models/indices already hosted, to save time on loading.
-
 •	Add memory functionality when conversing with a character or expert.
+
+•	Deploy the website, potentially with the FAISS models/indices already hosted, to save time on loading.
