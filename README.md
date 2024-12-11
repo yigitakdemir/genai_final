@@ -61,37 +61,37 @@ The application will start in your default web browser. The initial loading of b
 
 The app is divided into four main pages, accessible via a sidebar:
 
-    Interview a Character
-    Talk with an Expert
-    Explore a Character or Artifact
-    Test Your LOTR Knowledge
+•	Interview a Character
+•	Talk with an Expert
+•	Explore a Character or Artifact
+•	Test Your LOTR Knowledge
 
 **Backend Details**
 
-    Document Loader: Loads PDFs from the docs folder using PyPDFLoader.
-    Text Splitting: Splits the books into manageable chunks for FAISS embedding.
-    FAISS Index: Two separate indices:
-        General index for lore-related queries.
-        Character-specific index for in-character responses.
-    Prompt Templates: Customized prompts for character, general, quiz, and character/artifact description responses.
-    Context: Most relevant chunks from FAISS are combined into "context", which is used to enhance the prompts.
-    Chains: Uses LangChain to provide the prompt (which includes the FAISS-based context) into OpenAI's ChatGPT.
-    Response: Show ChatGPT's "informed" response through the custom styling and format of the main page.
+•	Document Loader: Loads PDFs from the docs folder using PyPDFLoader.
+•	Text Splitting: Splits the books into manageable chunks for FAISS embedding.
+•	FAISS Index: Two separate indices:
+    •	General index for lore-related queries.
+    •	Character-specific index for in-character responses.
+•	Prompt Templates: Customized prompts for character, general, quiz, and character/artifact description responses.
+•	Context: Most relevant chunks from FAISS are combined into "context", which is used to enhance the prompts.
+•	Chains: Uses LangChain to provide the prompt (which includes the FAISS-based context) into OpenAI's ChatGPT.
+•	Response: Show ChatGPT's "informed" response through the custom styling and format of the main page.
 
 Interactive Styling
 
-    Themed using custom CSS for a Middle-Earth-inspired look.
-    Background images, fonts, and centered character images enhance user experience.
+•	Themed using custom CSS for a Middle-Earth-inspired look.
+•	Background images, fonts, and centered character images enhance user experience.
 
 What if I encounter a bug?
 
-    Ensure the book PDFs are in the correct folder (docs).
-    Verify your API key in the .env file.
-    Check for missing dependencies and install them using pip install.
-    Ensure that Streamlit theming is applied through the .streamlit/config.toml file.
+•	Ensure the book PDFs are in the correct folder (docs).
+•	Verify your API key in the .env file.
+•	Check for missing dependencies and install them using pip install.
+•	Ensure that Streamlit theming is applied through the .streamlit/config.toml file.
 
 Future Improvements
 
-    Add other books from Tolkien's Legendarium such as The Hobbit and Silmarillion.
-    Deploy the website in Streamlit with the FAISS models/indices already hosted, to save time on loading.
-    Add memory functionality when conversing with a character or expert.
+•	Add other books from Tolkien's Legendarium such as The Hobbit and Silmarillion.
+•	Deploy the website in Streamlit with the FAISS models/indices already hosted, to save time on loading.
+•	Add memory functionality when conversing with a character or expert.
