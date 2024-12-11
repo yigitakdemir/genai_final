@@ -61,41 +61,41 @@ The application will start in your default web browser. The initial loading of b
 
 The app is divided into four main pages, accessible via a sidebar:
 
-•	Interview a Character
+•	**Interview a Character**
 
-•	Talk with an Expert
+•	**Talk with an Expert**
 
-•	Explore a Character or Artifact
+•	**Explore a Character or Artifact**
 
-•	Test Your LOTR Knowledge
+•	**Test Your LOTR Knowledge**
 
 **Backend Details**
 
-•	Document Loader: Loads PDFs from the docs folder using PyPDFLoader.
+•	**Document Loader:** Loads PDFs from the docs folder using PyPDFLoader.
 
-•	Text Splitting: Splits the books into manageable chunks for FAISS embedding.
+•	**Text Splitting:** Splits the books into manageable chunks for FAISS embedding.
 
-•	FAISS Index: Two separate indices:
+•	**FAISS Index:** Two separate indices:
 
-    •	General index for lore-related queries.
+    • General index for lore-related queries.
     
-    •	Character-specific index for in-character responses.
+    • Character-specific index for in-character responses.
     
-•	Prompt Templates: Customized prompts for character, general, quiz, and character/artifact description responses.
+•	**Prompt Templates:** Customized prompts for character, general, quiz, and character/artifact description responses.
 
-•	Context: Most relevant chunks from FAISS are combined into "context", which is used to enhance the prompts.
+•	**Context:** Most relevant chunks from FAISS are combined into "context", which is used to enhance the prompts.
 
-•	Chains: Uses LangChain to provide the prompt (which includes the FAISS-based context) into OpenAI's ChatGPT.
+•	**Chains:** Uses LangChain to provide the prompt (which includes the FAISS-based context) into OpenAI's ChatGPT.
 
-•	Response: Show ChatGPT's "informed" response through the custom styling and format of the main page.
+•	**Response:** Show ChatGPT's "informed" response through the custom styling and format of the main page.
 
-Interactive Styling
+**Interactive Styling**
 
 •	Themed using custom CSS for a Middle-Earth-inspired look.
 
 •	Background images, fonts, and centered character images enhance user experience.
 
-What if I encounter a bug?
+**What if I encounter a bug?**
 
 •	Ensure the book PDFs are in the correct folder (docs).
 
@@ -105,7 +105,7 @@ What if I encounter a bug?
 
 •	Ensure that Streamlit theming is applied through the .streamlit/config.toml file.
 
-Future Improvements
+**Future Improvements**
 
 •	Add other books from Tolkien's Legendarium such as The Hobbit and Silmarillion.
 
