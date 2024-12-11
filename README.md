@@ -1,6 +1,6 @@
 ****Lord of the Rings Companion****
 
-The Lord of the Rings Companion is a Retrieval-Augmented Generation (RAG) application built with Streamlit and LangChain. It uses FAISS (Facebook AI Similarity Search) to retrieve context from the full-text PDFs of J.R.R. Tolkien's The Lord of the Rings trilogy stored in a docs folder. This context is then used to answer questions, generate quizzes, and provide insights about LOTR's Middle-Earth.
+The Lord of the Rings Companion is a Retrieval-Augmented Generation (RAG) application built with Streamlit and LangChain. It uses FAISS (Facebook AI Similarity Search) to retrieve context from the full-text PDFs of J.R.R. Tolkien's The Lord of the Rings (LOTR) trilogy stored in a docs folder. This context is then used to support interview-like conversations with main LOTR characters, answer questions, generate quizzes, and provide insights about LOTR's Middle-Earth.
 
 
 **Features**
